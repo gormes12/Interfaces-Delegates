@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MainMenu
+    class MainMenu 
     {
         private List<IAct> m_Items = new List<IAct>();
         private string m_MainName;

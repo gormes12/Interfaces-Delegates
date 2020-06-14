@@ -10,6 +10,11 @@ namespace Ex04.Menus.Delegates
     {
         public event Action ItemActions;
 
+        public LeafItem(string i_ItemTitle) : base(i_ItemTitle) // c'tor
+        {
+
+        }
+
         public override void ExecuteAction()
         {
             OnItemActions();
@@ -23,11 +28,5 @@ namespace Ex04.Menus.Delegates
                 ItemActions.Invoke();
             }
         }
-
-        public LeafItem(string i_ItemTitle) : base(i_ItemTitle) // c'tor
-        {
-
-        }
-
     }
 }

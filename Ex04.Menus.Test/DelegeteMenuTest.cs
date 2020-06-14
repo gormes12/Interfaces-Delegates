@@ -9,14 +9,14 @@ namespace Ex04.Menus.Test
 {
     class DelegeteMenuTest
     {
-        private Menu m_MainMenu;
+        private MainMenu m_MainMenu;
 
         public DelegeteMenuTest()
         {
             m_MainMenu = createMainMenu();
         }
 
-        private Menu createMainMenu()
+        private MainMenu createMainMenu()
         {
             MainMenu mainMenu = new MainMenu("Main Menu");
             Menu versionAndDigitsMenu = new Menu("Version and Digits");
@@ -75,7 +75,7 @@ namespace Ex04.Menus.Test
 
         public void ShowMainMenu()
         {
-            m_MainMenu.Show();
+            m_MainMenu.ShowMainMenu();
         }
     }
 }

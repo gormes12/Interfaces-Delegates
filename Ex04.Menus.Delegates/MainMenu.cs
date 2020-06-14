@@ -12,5 +12,10 @@ namespace Ex04.Menus.Delegates
         {
 
         }
+
+        public void ShowMainMenu()
+        {
+            this.ExecuteAction();
+        }
     }
 }

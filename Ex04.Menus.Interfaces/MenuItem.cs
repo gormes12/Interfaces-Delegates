@@ -6,27 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MenuItem : IAct
-    {
-        private List<Item> m_Items;
-        private string m_MenuItemName;
 
-        public string Name
+    public abstract class MenuItem
+    {
+        protected string m_MenuItemTitle;
+
+        public MenuItem(string i_MenuItemTitle)
         {
-            get
-            {
-                return m_MenuItemName;
-            }
+            m_MenuItemTitle = i_MenuItemTitle;
         }
+
+        public abstract void ExecuteAction();
 
         public override string ToString()
         {
-            return m_MenuItemName;
-        }
-
-        public void Execute()
-        {
-
+            return m_MenuItemTitle;
         }
     }
 }

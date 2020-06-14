@@ -21,6 +21,5 @@ namespace Ex04.Menus.Delegates
         {
             return m_MenuItemTitle;
         }
-
     }
 }

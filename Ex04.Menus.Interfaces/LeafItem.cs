@@ -10,12 +10,12 @@ namespace Ex04.Menus.Interfaces
     {
         void Execute();
 
-        string Name
-        {
-            get;
-        }
+        //string Name
+        //{
+        //    get;
+        //}
     }
-    class Item : IAct
+    class LeafItem : IAct
     {
         private string m_itemName;
 
