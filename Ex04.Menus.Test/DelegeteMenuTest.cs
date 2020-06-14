@@ -31,7 +31,7 @@ namespace Ex04.Menus.Test
             LeafItem showTimeItem = new LeafItem("Show Time");
             showTimeItem.ItemActions += new Action(showTime);
             showDateTimeMenu.AddMenuItems(showTimeItem);
-            LeafItem showDateItem = new LeafItem("Date Time");
+            LeafItem showDateItem = new LeafItem("Show Date");
             showDateItem.ItemActions += new Action(showDate);
             showDateTimeMenu.AddMenuItems(showDateItem);
             mainMenu.AddMenuItems(showDateTimeMenu);

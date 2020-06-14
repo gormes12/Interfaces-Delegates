@@ -10,8 +10,10 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-            DelegeteMenuTest deletateManu = new DelegeteMenuTest();
-            deletateManu.ShowMainMenu();
+            //DelegeteMenuTest deletateManu = new DelegeteMenuTest();
+            //deletateManu.ShowMainMenu();
+            InterfaceMenuTest interfaceMenu = new InterfaceMenuTest();
+            interfaceMenu.ShowMainMenu();
         }
     }
 }

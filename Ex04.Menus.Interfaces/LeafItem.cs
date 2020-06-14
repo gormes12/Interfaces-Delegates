@@ -6,35 +6,39 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    public interface IAct
+    public class LeafItem : MenuItem
     {
-        void Execute();
+        private readonly List<IActionObserver> m_ActionObserve = new List<IActionObserver>();
 
-        //string Name
-        //{
-        //    get;
-        //}
-    }
-    class LeafItem : IAct
-    {
-        private string m_itemName;
-
-        public string Name
+        public LeafItem(string i_ItemTitle) : base(i_ItemTitle)
         {
-            get
+
+        }
+
+        public void AttachObserver(IActionObserver i_ActionObserver)
+        {
+            m_ActionObserve.Add(i_ActionObserver);
+        }
+
+        public void DetachObserver(IActionObserver i_ActionObserver)
+        {
+            m_ActionObserve.Remove(i_ActionObserver);
+        }
+
+
+        private void notifyActionObservers()
+        {
+            foreach (IActionObserver observer in m_ActionObserve)
             {
-                return m_itemName;
+                observer.makeAction(m_MenuItemTitle);
             }
         }
-        public override string ToString()
-        {
-            return m_itemName;
-        }
 
-        public void Execute()
+        public override void ExecuteAction()
         {
-
+            notifyActionObservers();
         }
+        
 
     }
 

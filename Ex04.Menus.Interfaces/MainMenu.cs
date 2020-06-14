@@ -6,32 +6,18 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MainMenu 
+    public class MainMenu : Menu
     {
-        private List<IAct> m_Items = new List<IAct>();
-        private string m_MainName;
-
-        public MainMenu()
+        public MainMenu(string i_MainMenuTitle) : base(i_MainMenuTitle)
         {
 
+        }
+
+        public void ShowMainMenu()
+        {
+            this.ExecuteAction();
         }
     }
 }
 
-    //    public void Show()
-    //    {
-    //        int option = ChooseOption(0, m_Items.Capacity);
-    //        Console.WriteLine(m_MainName);
-    //        foreach (IAct item in m_Items)
-    //        {
-    //            Console.WriteLine(item.ToString());
-    //        }
-
-    //        do
-    //        {
-
-    //        } while ();
-
-    //    }
-    //}
 

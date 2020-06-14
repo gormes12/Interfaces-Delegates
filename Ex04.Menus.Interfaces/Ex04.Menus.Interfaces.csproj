@@ -39,6 +39,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetValidInputs.cs" />
+    <Compile Include="IActionObserver.cs" />
     <Compile Include="LeafItem.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Menu.cs" />
