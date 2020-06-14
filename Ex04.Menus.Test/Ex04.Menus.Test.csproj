@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73F241F2-C674-4E94-9F47-F1E2CABB25B6}</ProjectGuid>
+    <ProjectGuid>{46616F03-6775-4C1C-82FC-658E477A22DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex04.Menus.Delegates</RootNamespace>
-    <AssemblyName>Ex04.Menus.Delegates</AssemblyName>
+    <RootNamespace>Ex04.Menus.Test</RootNamespace>
+    <AssemblyName>Ex04.Menus.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,16 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LeafItem.cs" />
-    <Compile Include="MainMenu.cs" />
-    <Compile Include="MenuItem.cs" />
-    <Compile Include="SubMenu.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ex04.Menus.Test\Ex04.Menus.Test.csproj">
-      <Project>{46616f03-6775-4c1c-82fc-658e477a22dc}</Project>
-      <Name>Ex04.Menus.Test</Name>
-    </ProjectReference>
+    <Compile Include="GetValidInputs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
