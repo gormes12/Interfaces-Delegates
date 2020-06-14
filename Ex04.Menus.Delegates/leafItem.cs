@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Delegates
 {
-    class LeafItem : MenuItem
+    public class LeafItem : MenuItem
     {
         public event Action ItemActions;
 
@@ -19,6 +19,7 @@ namespace Ex04.Menus.Delegates
         {
             if(ItemActions != null)
             {
+                Console.WriteLine(this.m_MenuItemTitle);
                 ItemActions.Invoke();
             }
         }

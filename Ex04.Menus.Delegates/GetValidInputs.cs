@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ex04.Menus.Test
+namespace Ex04.Menus.Delegates
 {
-    public class GetValidInputs
+    class GetValidInputs
     {
         public static int GetValidInputNumber(int i_MinRange, int i_MaxRange)
         {

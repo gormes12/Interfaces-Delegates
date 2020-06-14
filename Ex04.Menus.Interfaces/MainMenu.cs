@@ -15,21 +15,23 @@ namespace Ex04.Menus.Interfaces
         {
 
         }
-
-        public void Show()
-        {
-            int option = ChooseOption(0, m_Items.Capacity);
-            Console.WriteLine(m_MainName);
-            foreach (IAct item in m_Items)
-            {
-                Console.WriteLine(item.ToString());
-            }
-
-            do
-            {
-
-            } while ();
-
-        }
     }
 }
+
+    //    public void Show()
+    //    {
+    //        int option = ChooseOption(0, m_Items.Capacity);
+    //        Console.WriteLine(m_MainName);
+    //        foreach (IAct item in m_Items)
+    //        {
+    //            Console.WriteLine(item.ToString());
+    //        }
+
+    //        do
+    //        {
+
+    //        } while ();
+
+    //    }
+    //}
+
