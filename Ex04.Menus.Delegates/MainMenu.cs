@@ -12,7 +12,7 @@ namespace Ex04.Menus.Delegates
         {
         }
 
-        public void ShowMainMenu()
+        public void Show()
         {
             this.ExecuteAction();
         }

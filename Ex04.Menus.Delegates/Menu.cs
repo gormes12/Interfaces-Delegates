@@ -21,7 +21,7 @@ namespace Ex04.Menus.Delegates
             r_MenuItems.Add(i_ItemToAdd);
         }
 
-        private void show()
+        private void showMenuItems()
         {
             int optionSelected;
 
@@ -46,7 +46,7 @@ namespace Ex04.Menus.Delegates
 
         public override void ExecuteAction()
         {
-            this.show();
+            this.showMenuItems();
         }
 
         private int showOptionsAndGetChoise()

@@ -77,7 +77,7 @@ namespace Ex04.Menus.Test
 
         public void ShowMainMenu()
         {
-            m_MainMenu.ShowMainMenu();
+            m_MainMenu.Show();
         }
     }
 }
