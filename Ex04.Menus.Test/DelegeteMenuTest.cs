@@ -7,7 +7,7 @@ using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
-    class DelegeteMenuTest
+    public class DelegeteMenuTest
     {
         private MainMenu m_MainMenu;
 
@@ -18,22 +18,23 @@ namespace Ex04.Menus.Test
 
         private MainMenu createMainMenu()
         {
-            MainMenu mainMenu = new MainMenu("Main Menu");
+            MainMenu mainMenu = new MainMenu("Delegete -  Main Menu");
             Menu versionAndDigitsMenu = new Menu("Version and Digits");
-            LeafItem countCapitalItem = new LeafItem("Count Capital");
-            countCapitalItem.ItemActions += new Action(countCapitals);
-            versionAndDigitsMenu.AddMenuItems(countCapitalItem);
-            LeafItem showVersionItem = new LeafItem("Show Version");
-            showVersionItem.ItemActions += new Action(showVersion);
-            versionAndDigitsMenu.AddMenuItems(showVersionItem);
-            mainMenu.AddMenuItems(versionAndDigitsMenu);
             Menu showDateTimeMenu = new Menu("Show Date/Time");
+            LeafItem countCapitalItem = new LeafItem("Count Capital");
+            LeafItem showVersionItem = new LeafItem("Show Version");
             LeafItem showTimeItem = new LeafItem("Show Time");
-            showTimeItem.ItemActions += new Action(showTime);
-            showDateTimeMenu.AddMenuItems(showTimeItem);
             LeafItem showDateItem = new LeafItem("Show Date");
-            showDateItem.ItemActions += new Action(showDate);
+
+            countCapitalItem.ActionChoosed += new Action(countCapitals);
+            showVersionItem.ActionChoosed += new Action(showVersion);
+            showTimeItem.ActionChoosed += new Action(showTime);
+            showDateItem.ActionChoosed += new Action(showDate);
+            versionAndDigitsMenu.AddMenuItems(countCapitalItem);
+            versionAndDigitsMenu.AddMenuItems(showVersionItem);
+            showDateTimeMenu.AddMenuItems(showTimeItem);
             showDateTimeMenu.AddMenuItems(showDateItem);
+            mainMenu.AddMenuItems(versionAndDigitsMenu);
             mainMenu.AddMenuItems(showDateTimeMenu);
 
             return mainMenu;
@@ -60,9 +61,10 @@ namespace Ex04.Menus.Test
         {
             string sentence;
             int counter = 0;
+
             Console.WriteLine("Please insert a sentence");
             sentence = Console.ReadLine();
-            foreach(Char c in sentence)
+            foreach(char c in sentence)
             {
                 if(char.IsUpper(c))
                 {

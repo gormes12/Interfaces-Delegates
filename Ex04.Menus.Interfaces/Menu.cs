@@ -34,7 +34,7 @@ namespace Ex04.Menus.Interfaces
                     r_MenuItems[optionSelected - 1].ExecuteAction();
                     if (r_MenuItems[optionSelected - 1] is LeafItem)
                     {
-                        Console.WriteLine("Press any key to go back");
+                        Console.WriteLine("{0}Press any key to go back", Environment.NewLine);
                         Console.ReadKey();
                     }
                 }
@@ -62,7 +62,8 @@ namespace Ex04.Menus.Interfaces
                 Console.WriteLine("{0}. {1}", lineNumber++, item.ToString());
             }
 
-            optionSelected = GetValidInputs.GetValidInputNumber(0, r_MenuItems.Count);
+            optionSelected = GetValidInputs.GetValidInputNumber(1, r_MenuItems.Count, k_ExitOrBackIndex, this is MainMenu);
+
             return optionSelected;
         }
     }

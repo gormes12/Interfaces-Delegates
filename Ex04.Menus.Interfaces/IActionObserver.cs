@@ -8,7 +8,6 @@ namespace Ex04.Menus.Interfaces
 {
     public interface IActionObserver
     {
-        void makeAction(string actionTitle);
+        void MakeAction(string actionTitle);
     }
 }
-

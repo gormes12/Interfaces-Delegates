@@ -12,7 +12,6 @@ namespace Ex04.Menus.Interfaces
 
         public LeafItem(string i_ItemTitle) : base(i_ItemTitle)
         {
-
         }
 
         public void AttachObserver(IActionObserver i_ActionObserver)
@@ -25,12 +24,11 @@ namespace Ex04.Menus.Interfaces
             m_ActionObserve.Remove(i_ActionObserver);
         }
 
-
         private void notifyActionObservers()
         {
             foreach (IActionObserver observer in m_ActionObserve)
             {
-                observer.makeAction(m_MenuItemTitle);
+                observer.MakeAction(m_MenuItemTitle);
             }
         }
 
@@ -38,8 +36,5 @@ namespace Ex04.Menus.Interfaces
         {
             notifyActionObservers();
         }
-        
-
     }
-
 }

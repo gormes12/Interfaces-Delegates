@@ -10,7 +10,6 @@ namespace Ex04.Menus.Delegates
     {
         public MainMenu(string i_MainMenuTitle) : base(i_MainMenuTitle)
         {
-
         }
 
         public void ShowMainMenu()

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Ex04.Menus.Interfaces
 {
-
     public abstract class MenuItem
     {
         protected string m_MenuItemTitle;
