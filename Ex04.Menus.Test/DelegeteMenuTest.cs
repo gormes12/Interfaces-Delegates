@@ -26,10 +26,10 @@ namespace Ex04.Menus.Test
             LeafItem showTimeItem = new LeafItem("Show Time");
             LeafItem showDateItem = new LeafItem("Show Date");
 
-            countCapitalItem.ActionChoosed += new Action(countCapitals);
-            showVersionItem.ActionChoosed += new Action(showVersion);
-            showTimeItem.ActionChoosed += new Action(showTime);
-            showDateItem.ActionChoosed += new Action(showDate);
+            countCapitalItem.ActionChoosed += CountCapitalItem_ActionChoosed;
+            showVersionItem.ActionChoosed += ShowVersionItem_ActionChoosed;
+            showTimeItem.ActionChoosed += ShowTimeItem_ActionChoosed;
+            showDateItem.ActionChoosed += ShowDateItem_ActionChoosed;
             versionAndDigitsMenu.AddMenuItems(countCapitalItem);
             versionAndDigitsMenu.AddMenuItems(showVersionItem);
             showDateTimeMenu.AddMenuItems(showTimeItem);
@@ -40,39 +40,39 @@ namespace Ex04.Menus.Test
             return mainMenu;
         }
 
-        private void showDate()
-        {
-            DateTime currentTime = DateTime.Now;
-            Console.WriteLine(currentTime.ToString("dd/MM/yyyy"));
-        }
-
-        private void showTime()
-        {
-            DateTime currentTime = DateTime.Now;
-            Console.WriteLine(currentTime.ToString("HH:mm"));
-        }
-
-        private void showVersion()
-        {
-            Console.WriteLine("Version: 20.2.4.30620");
-        }
-
-        private void countCapitals()
+        private void CountCapitalItem_ActionChoosed()
         {
             string sentence;
             int counter = 0;
 
             Console.WriteLine("Please insert a sentence");
             sentence = Console.ReadLine();
-            foreach(char c in sentence)
+            foreach (char c in sentence)
             {
-                if(char.IsUpper(c))
+                if (char.IsUpper(c))
                 {
                     counter++;
                 }
             }
 
             Console.WriteLine("There are {0} capital letters!", counter);
+        }
+
+        private void ShowVersionItem_ActionChoosed()
+        {
+            Console.WriteLine("Version: 20.2.4.30620");
+        }
+
+        private void ShowTimeItem_ActionChoosed()
+        {
+            DateTime currentTime = DateTime.Now;
+            Console.WriteLine(currentTime.ToString("HH:mm"));
+        }
+
+        private void ShowDateItem_ActionChoosed()
+        {
+            DateTime currentTime = DateTime.Now;
+            Console.WriteLine(currentTime.ToString("dd/MM/yyyy"));
         }
 
         public void ShowMainMenu()
