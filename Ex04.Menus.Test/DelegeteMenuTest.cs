@@ -26,10 +26,10 @@ namespace Ex04.Menus.Test
             LeafItem showTimeItem = new LeafItem("Show Time");
             LeafItem showDateItem = new LeafItem("Show Date");
 
-            countCapitalItem.ActionChoosed += CountCapitalItem_ActionChoosed;
-            showVersionItem.ActionChoosed += ShowVersionItem_ActionChoosed;
-            showTimeItem.ActionChoosed += ShowTimeItem_ActionChoosed;
-            showDateItem.ActionChoosed += ShowDateItem_ActionChoosed;
+            countCapitalItem.ItemClicked += countCapitalItem_ItemClicked;
+            showVersionItem.ItemClicked += showVersionItem_ItemClicked;
+            showTimeItem.ItemClicked += showTimeItem_ItemClicked;
+            showDateItem.ItemClicked += showDateItem_ItemClicked;
             versionAndDigitsMenu.AddMenuItems(countCapitalItem);
             versionAndDigitsMenu.AddMenuItems(showVersionItem);
             showDateTimeMenu.AddMenuItems(showTimeItem);
@@ -40,7 +40,7 @@ namespace Ex04.Menus.Test
             return mainMenu;
         }
 
-        private void CountCapitalItem_ActionChoosed()
+        private void countCapitalItem_ItemClicked()
         {
             string sentence;
             int counter = 0;
@@ -58,18 +58,18 @@ namespace Ex04.Menus.Test
             Console.WriteLine("There are {0} capital letters!", counter);
         }
 
-        private void ShowVersionItem_ActionChoosed()
+        private void showVersionItem_ItemClicked()
         {
             Console.WriteLine("Version: 20.2.4.30620");
         }
 
-        private void ShowTimeItem_ActionChoosed()
+        private void showTimeItem_ItemClicked()
         {
             DateTime currentTime = DateTime.Now;
             Console.WriteLine(currentTime.ToString("HH:mm"));
         }
 
-        private void ShowDateItem_ActionChoosed()
+        private void showDateItem_ItemClicked()
         {
             DateTime currentTime = DateTime.Now;
             Console.WriteLine(currentTime.ToString("dd/MM/yyyy"));

@@ -8,7 +8,7 @@ namespace Ex04.Menus.Delegates
 {
     public class LeafItem : MenuItem
     {
-        public event Action ActionChoosed;
+        public event Action ItemClicked;
 
         public LeafItem(string i_ItemTitle) : base(i_ItemTitle) // c'tor
         {
@@ -16,15 +16,15 @@ namespace Ex04.Menus.Delegates
 
         public override void ExecuteAction()
         {
-            OnActionChoosed();
+            OnItemClicked();
         }
 
-        protected virtual void OnActionChoosed()
+        protected virtual void OnItemClicked()
         {
-            if(ActionChoosed != null)
+            if(ItemClicked != null)
             {
                 Console.WriteLine(this.m_MenuItemTitle);
-                ActionChoosed.Invoke();
+                ItemClicked.Invoke();
             }
         }
     }
